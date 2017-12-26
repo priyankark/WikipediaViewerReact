@@ -17,5 +17,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://priyankark.github.io/WikipediaViewerReact",
+   "homepage": "https://priyankark.github.io/WikipediaViewerReact"
 }

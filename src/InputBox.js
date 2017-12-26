@@ -6,7 +6,7 @@ export default class InputBox extends Component
 
   baseUrl ="https://en.wikipedia.org/w/api.php?&origin=*&format=json&action=opensearch&search=";
   randomArticleUrl ="https://en.wikipedia.org/wiki/Special:Random";
-  
+
   state={
     value:"",
     article:""
@@ -21,7 +21,7 @@ export default class InputBox extends Component
       return resp.json()
     }).then(function (data) {
         ref.setState({ article: data })
-      
+
     });
      // console.log(JSON.stringify(ref.state.article)+"second");
   }
@@ -40,11 +40,11 @@ export default class InputBox extends Component
   render()
   {
     return(
-      <div style={{backgroundColor:'purple'}} >
+      <div style={{backgroundColor:'purple'}} className="col-lg-12" >
       <div className="row">
         <div className="jumbotron">
         <div className="row">
-          <div className="col-sm-6 col-lg-12">
+          <div className="col-lg-12">
           <h2 className="text-center">
             Wikipedia Viewer
           </h2>
@@ -56,13 +56,13 @@ export default class InputBox extends Component
             ~Priyankar Kumar
           </h5>
           </div>
-        </div>  
         </div>
         </div>
-        
+        </div>
+
         <div className="row">
 
-        <div className="text-center form-group">
+        <div className="text-center form-group" style={{width:"100% !important"}}>
           <div className="col-sm-offset-1 col-sm-3 col-lg-offset-4 col-lg-4">
           <input type="text" className="form-control" onChange={this.handleChange} />
           <input type="submit" className="btn btn-sm btn-danger" value="Search" onClick={this.handleSubmit} />
